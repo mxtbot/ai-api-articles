@@ -40,7 +40,7 @@ MCP 是 Anthropic 2024 年底开源的协议，现在 Cursor、Claude、VS Code�
 
 ## 三、实战：我的日报流水线
 
-我用的是一套聚合了 127 个 MCP 工具的网关（https://mxt-api.cn/mcp/gateway/），一个地址全接入。日报流程用到了其中 5 类工具：
+我用的是一套聚合了 127 个 MCP 工具的网关（地址见文末），一个地址全接入。日报流程用到了其中 5 类工具：
 
 ### 第一步：抓新闻（news 工具）
 
@@ -103,7 +103,7 @@ AI 直接读我的待办文件，把"我昨天干了啥、今天要干啥"写进
 
 **路线 A：用现成客户端（零门槛）**
 
-装 Cursor 或 Claude Desktop，配置 MCP 地址（教程见 https://mxt-api.cn/mcp/guide.html），然后在对话里说"帮我查一下今天的新闻热点"——AI 会自动调用工具。
+装 Cursor 或 Claude Desktop，配置 MCP 地址（Streamable HTTP 类型，填入网关 URL + Token），然后在对话里说"帮我查一下今天的新闻热点"——AI 会自动调用工具。
 
 **路线 B：用工作流平台（低代码）**
 
@@ -137,8 +137,10 @@ async with ClientSession(url="https://mxt-api.cn/mcp/gateway/") as session:
 
 我的回答是：AI 不会取代你，但**会用 AI 的人会取代不用 AI 的人**。而会用 AI 的标志，不是会聊天，而是**能让 AI 替你干活**。
 
-MCP 就是那把钥匙。工具已经就位（127 个，还在涨），剩下的就是你的一句话。
+MCP 就是那把钥匙。工具已经就位（我维护的网关实例已有 127 个工具，还在涨），剩下的就是你的一句话。
+
+> 网关地址：https://mxt-api.cn/mcp/gateway/（个人项目，供读者体验；MCP 是开放标准，也可自行搭建）
 
 ---
 
-*模型通（mxt-api.cn）· AI 算力与 Agent 工具平台*
+*本文作者：独立开发者，Agent 自动化实践分享。*
